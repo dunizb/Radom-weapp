@@ -64,13 +64,6 @@ Page({
     const list = wx.getStorageSync(SRORAGE_KEY);
     const value = this.data.value;
     let index = this.data.index;
-    if(value.length === 0) {
-      wx.showToast({
-        title: '请输入',
-        icon: 'none'
-      })
-      return;
-    }
     if(this.data.isCreate) { // 创建新列表
       index = list.length;
       this.data.range.push(this.data.value)
