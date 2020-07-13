@@ -20,7 +20,8 @@
 }
 .input-box picker .picker {
   display: inline-block;
-  width: 200px;
+  /* width: 200px; */
+  width: 380rpx;
   padding-left: 8px;
 }
 
