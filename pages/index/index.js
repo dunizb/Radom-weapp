@@ -64,27 +64,34 @@ Page({
     const list = wx.getStorageSync(SRORAGE_KEY);
     const value = this.data.value;
     let index = this.data.index;
-    if(this.data.isCreate) { // 创建新列表
-      index = list.length;
-      this.data.range.push(this.data.value)
-      list.push({
-        key: this.data.value,
-        list: []
+    if(value === '') {
+      wx.showToast({
+        title: '你什么都没输入',
+        icon: 'none'
       })
-      this.setData({
-        range: this.data.range,
-        textarea: '',
-        index
-      });
-    } else {  // 编辑
-      if(this.data.range[index] === value) { // 值相同，没修改
-        return;
+    } else {
+      if(this.data.isCreate) { // 创建新列表
+        index = list.length;
+        this.data.range.push(this.data.value)
+        list.push({
+          key: this.data.value,
+          list: []
+        })
+        this.setData({
+          range: this.data.range,
+          textarea: '',
+          index
+        });
+      } else {  // 编辑
+        if(this.data.range[index] === value) { // 值相同，没修改
+          return;
+        }
+        this.data.range[index] = value;
+        list[index]['key'] = value;  
+        this.setData({
+          range: this.data.range
+        });  
       }
-      this.data.range[index] = value;
-      list[index]['key'] = value;  
-      this.setData({
-        range: this.data.range
-      });  
     }
     wx.setStorageSync(SRORAGE_KEY, list);
   },

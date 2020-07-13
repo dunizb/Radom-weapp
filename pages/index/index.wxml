@@ -23,7 +23,7 @@
 
   <view class="start-btn" bindtap="start">
     <image src="../../images/radom_play.svg" class="icon icon-radom"></image>
-    <text>开始</text>
+    <!-- <text>开始</text> -->
   </view>
 
   <van-dialog id="van-dialog" />
@@ -35,7 +35,7 @@
     show-cancel-button
     bind:confirm="createAndEditItem">
     <view class="content">
-      <view class="tip">中文建议不超过10个字，英文不超过16个字符</view>
+      <view class="tip">建议中文不超过10个、英文不超过16个字符</view>
       <input class="input" value="{{value}}" bindinput="handlerBindInput" placeholder="如：今天吃什么"/>
     </view>
   </van-dialog>  

@@ -10,7 +10,6 @@
   border: 4rpx solid #ccc;
   border-radius: 5px;
   height: 60px;
-  padding: 0 5px 0 10px;
 }
 
 .input-box{
@@ -22,6 +21,7 @@
 .input-box picker .picker {
   display: inline-block;
   width: 200px;
+  padding-left: 8px;
 }
 
 .btns {
@@ -32,13 +32,16 @@
 .icon {
   width: 16px;
   height: 16px;
-  margin: 0 8px;
+  margin:0 8px;
 }
 .icon-sanjiao {
   margin-right: 16px;
   position: absolute;
   right: 140px;
   margin-top: 4px;
+}
+.icon-radom {
+  transform: scale(1.3);
 }
 
 .textarea-box {
@@ -61,10 +64,9 @@
   align-items: center;
   background-color: #1989fa;
   color: #fff;
-  padding: 15px 26px 15px 20px;
+  padding: 14px 24px;
   border-radius: 30px;
   box-shadow: 0 2px 8px 3px #e4e3e3;
-  font-size: 18px;
 }
 
 .content {
