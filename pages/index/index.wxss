@@ -1,8 +1,10 @@
 /**index.wxss**/
+
 .container {
   padding: 20px;
   background-color: #fff;
 }
+
 .box {
   display: flex;
   justify-content: space-between;
@@ -12,20 +14,24 @@
   height: 60px;
 }
 
-.input-box{
+.box .input-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
-.input-box picker .picker {
+
+.box .input-box picker .picker {
   display: inline-block;
-  /* width: 200px; */
-  width: 380rpx;
+  width: 190px;
   padding-left: 8px;
 }
 
-.btns {
+.box .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
   padding-left: 10px;
   border-left: 1px solid #ccc;
 }
@@ -33,14 +39,16 @@
 .icon {
   width: 16px;
   height: 16px;
-  margin:0 8px;
+  margin: 0 8px;
 }
+
 .icon-sanjiao {
-  margin-right: 16px;
   position: absolute;
   right: 140px;
   margin-top: 4px;
+  margin-right: 16px;
 }
+
 .icon-radom {
   transform: scale(1.3);
 }
@@ -49,7 +57,8 @@
   margin-top: 40px;
   border-bottom: 1px solid #ccc;
 }
-.textarea-box textarea{
+
+.textarea-box textarea {
   font-size: 16px;
   padding: 5px;
   width: 280px;
@@ -74,14 +83,14 @@
   margin: 10px 20px;
 }
 
-.tip {
+.content .tip {
   font-size: 14px;
   margin-bottom: 10px;
   color: #888888;
 }
-.input {
+
+.content .input {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
