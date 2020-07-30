@@ -171,4 +171,17 @@ Page({
       textarea: list[0][SRORAGE_KEY].join("，"),
     });
   },
+
+  onShareAppMessage() {
+    return {
+      title: "抽个啥，一个帮助你决策的小程序",
+      paht: "pages/index/index"
+    }
+  },
+  onShareTimeline() {
+   return {
+    title: "抽个啥，一个帮助你决策的小程序",
+    query: ""
+   }
+  }
 });
